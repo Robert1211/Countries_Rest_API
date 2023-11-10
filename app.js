@@ -1,3 +1,4 @@
+import { renderCountriesList } from "./dom-utils.js";
 const API_URL_ALL = "https://restcountries.com/v3.1/all";
 
 //fetch(API_URL_ALL);      //na funkcji fetch musimy wywolac funckje then
@@ -16,4 +17,5 @@ fetch(API_URL_ALL).then((res) => res.json())
                 flagUrl: country.flags.png,
             };
         });
+        renderCountriesList(countries);
     });
