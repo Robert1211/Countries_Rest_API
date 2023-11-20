@@ -16,13 +16,14 @@ const createFlagImgElement = (country) => {
     const imgContainerElement = document.createElement("div");
     const imgElement = document.createElement("img");
     imgElement.src = country.flagUrl;
-    imgElement.width = 160;
-    imgElement.height = 98;
+    // imgElement.width = 160;
+    // imgElement.height = 98;
 
     imgContainerElement.appendChild(imgElement);
 
     return imgContainerElement;
 }
+
 
 const createCountryItemElement = (country) => {
     const countryElement = document.createElement("li");
