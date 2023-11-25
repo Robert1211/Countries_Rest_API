@@ -3,12 +3,13 @@ const API_URL_ALL = "https://restcountries.com/v3.1/all";
 
 //fetch(API_URL_ALL);      //na funkcji fetch musimy wywolac funckje then
 
-
 let countries;
+let query = "pol";
 
 fetch(API_URL_ALL).then((res) => res.json())
     .then((countriesRaw) => {
-        countries = countriesRaw.map((country) => {
+        countries = countriesRaw.filter(country => country.name.common.toLowerCase().includes(query.toLowerCase()));
+        countries = countries.map((country) => {
             return {
                 capital: country.capital && country.capital[0],
                 population: country.population,
@@ -19,3 +20,6 @@ fetch(API_URL_ALL).then((res) => res.json())
         });
         renderCountriesList(countries);
     });
+document.querySelector("#query").addEventListener("click", () => {
+    //render countries based on query
+});

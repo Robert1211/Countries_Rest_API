@@ -16,8 +16,7 @@ const createFlagImgElement = (country) => {
     const imgContainerElement = document.createElement("div");
     const imgElement = document.createElement("img");
     imgElement.src = country.flagUrl;
-    // imgElement.width = 160;
-    // imgElement.height = 98;
+    imgElement.alt = `${country.name} flag`;
 
     imgContainerElement.appendChild(imgElement);
 
@@ -34,8 +33,9 @@ const createCountryItemElement = (country) => {
     const infoContainerElement = document.createElement("div")
     infoContainerElement.classList.add("info-container");
 
-    const countryNameElement = document.createElement("span");
+    const countryNameElement = document.createElement("strong");
     countryNameElement.innerText = country.name;
+    countryNameElement.classList.add("country-name");
 
 
 
