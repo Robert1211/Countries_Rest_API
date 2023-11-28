@@ -1,3 +1,6 @@
+Live app
+https://Robert1211.github.io/Countries_Rest_API/
+
 1. Setup
 2. Data fetching
 3. Country thumbnail component
