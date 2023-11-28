@@ -22,7 +22,7 @@ body {
     font-size: 14px;
 }
 
-header,
+.filters,
 main {      
     max-width: 1280px;
     margin: 0 auto;

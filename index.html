@@ -22,18 +22,19 @@
             <button>Dark theme</button>
         </div>
     </header>
+    <div class="filters">
+        <input type="text" id="query" placeholder="Search for country" />
+        <select name="region" id="region">
+            <option value="Select region">Filter by region</option>
+            <option value="Europe">Europe</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </div>
     <main id="root">
-        <div class="filters">
-            <input type="text" id="query" placeholder="Search for country" />
-            <select name="region" id="region">
-                <option value="Select region">Filter by region</option>
-                <option value="Europe">Europe</option>
-                <option value="America">America</option>
-                <option value="Asia">Asia</option>
-                <option value="Africa">Africa</option>
-                <option value="Oceania">Oceania</option>
-            </select>
-        </div>
+
     </main>
 
     <script type="module" src="dom-utils.js"></script>
