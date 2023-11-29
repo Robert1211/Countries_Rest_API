@@ -77,6 +77,11 @@ li {
 
 }
 
+li a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
 li img{
     aspect-ratio: 160/98;
     width: 100%;
