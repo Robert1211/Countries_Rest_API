@@ -28,7 +28,7 @@ const createCountryItemElement = (country) => {
     const countryElement = document.createElement("li");
 
     const anchorElement = document.createElement("a");
-    anchorElement.href = `?country=${country.name}`;
+    anchorElement.href = `?country=${country.code}`;
 
     anchorElement.appendChild(createFlagImgElement(country));
 
@@ -66,10 +66,63 @@ const createListElement = (countries) => {
     return listElement;
 };
 
+const createDetailElement = (country) => {
+
+    // capital: country.capital && country.capital[0],
+    // population: country.population.toLocaleString(),
+    // name: country.name.common,
+    // nativeName: country.name.nativeName,
+    // code: country.cioc,
+    // code: country.cca3,
+    // region: country.region,
+    // subregion: country.subregion,
+    // flagUrl: country.flags.png,
+    // currencies: country.currencies,
+    // languages: country.languages,
+    // tld: country.tld[0],
+    const detailContainerElement = document.createElement('div');
+
+    const flagImgElement = createFlageImgElement(country);
+    const detailNameElement = document.createElement('strong');
+    detailNameElement.innerText = country.name;
+
+    detailContainerElement.appendChild(flagImgElement);
+    detailContainerElement.appendChild(detailNameElement);
+
+    detailContainerElement.appendChild(
+        createInfoElement("Native name", country.nativeName)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Population", country.population)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Region", country.region)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Sub region", country.subregion)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Capital", country.capital)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Population", country.nativeName)
+    );
+    detailContainerElement.appendChild(
+        createInfoElement("Population", country.nativeName)
+    );
+
+};
+
 export const renderCountriesList = (countries) => {
     const rootElement = document.querySelector("#root");
     rootElement.innerHTML = "";
     rootElement.appendChild(createListElement(countries));
 
     //render country items into main element
+};
+export const renderCountryDetails = (country) => {
+    const rootElement = document.querySelector("#root");
+    rootElement.innerHTML = "";
+    rootElement.appendChild(createDetailElement(countries));
+
 };

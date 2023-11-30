@@ -50,6 +50,10 @@ header button {
 }
 
 .filters{
+    display: none;
+}
+
+.filters.active {
     display: flex;
     justify-content: space-between; 
     margin-bottom: 32px;

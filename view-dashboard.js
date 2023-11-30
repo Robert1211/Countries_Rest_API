@@ -1,19 +1,24 @@
 import { renderCountriesList } from "./dom-utils.js";
+
 export const renderDashboard = () => {
     const API_URL_ALL = "https://restcountries.com/v3.1/all";
-    //fetch(API_URL_ALL);      //na funkcji fetch musimy wywolac funckje then
     let countries;
     let query = "";
     let region = "";
 
-    fetch(API_URL_ALL).then((res) => res.json())
+    fetch(API_URL_ALL)
+        .then((res) => res.json())
         .then((countriesRaw) => {
-            // countries = countriesRaw.filter(country => country.name.common.toLowerCase().includes(query.toLowerCase()));
             countries = countriesRaw.map((country) => {
+                if (country.name.common === "Australia") {
+                    console.log(country.region);
+                }
                 return {
                     capital: country.capital && country.capital[0],
                     population: country.population.toLocaleString(),
                     name: country.name.common,
+                    code: country.cioc,
+                    code: country.cca3,
                     region: country.region,
                     flagUrl: country.flags.png,
                 };
