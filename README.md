@@ -1,15 +1,17 @@
 
-REST Countries API 
-Live app
+####REST Countries API 
+
+####Live app
 https://Robert1211.github.io/Countries_Rest_API/
 
 Users should be able to:
 
-See all countries from the API on the homepage
-Search for a country using an input field
-Filter countries by region
-Click on a country to see more detailed information on a separate page
-Click through to the border countries on the detail page
+* See all countries from the API on the 
+homepage
+* Search for a country using an input field
+* Filter countries by region
+* Click on a country to see more detailed information on a separate page
+* Click through to the border countries on the detail page
 
 1. Setup
 2. Data fetching
@@ -21,8 +23,8 @@ Click through to the border countries on the detail page
 8. Dark theme (?)
 
 
-capital
-population
-name.common
-region
-flags.png
+- capital
+- population
+ - name.common
+- region
+- flags.png
