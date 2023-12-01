@@ -1,8 +1,8 @@
 
-####REST Countries API 
+### REST Countries API 
 
-####Live app
-https://Robert1211.github.io/Countries_Rest_API/
+#### Live app
+#### https://Robert1211.github.io/Countries_Rest_API/
 
 Users should be able to:
 
