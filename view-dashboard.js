@@ -18,7 +18,6 @@ export const renderDashboard = () => {
                     population: country.population.toLocaleString(),
                     name: country.name.common,
                     code: country.cioc,
-                    code: country.cca3,
                     region: country.region,
                     flagUrl: country.flags.png,
                 };
@@ -27,8 +26,10 @@ export const renderDashboard = () => {
         });
 
     const filterDataAndRenderCountriesList = () => {
-        const filteredCountries = countries.filter(country => {
-            return (country.name.toLowerCase().includes(query) && (!region || country.region === region)
+        const filteredCountries = countries.filter((country) => {
+            return (
+                country.name.toLowerCase().includes(query) &&
+                (!region || country.region === region)
             );
         });
 
@@ -38,11 +39,10 @@ export const renderDashboard = () => {
     document.querySelector("#query").addEventListener("input", (e) => {
         query = e.target.value.toLowerCase().trim();
         filterDataAndRenderCountriesList();
-
-        //render countries based on query
     });
-    document.querySelector("#region").addEventListener('change', (e) => {
+
+    document.querySelector("#region").addEventListener("change", (e) => {
         region = e.target.value;
         filterDataAndRenderCountriesList();
-    })
-}
+    });
+};
