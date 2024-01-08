@@ -22,7 +22,7 @@ homepage
 5. Finalize styling
 6. Routing -> detail
 7. Detail component
-8. Dark theme (?)
+8. Dark theme 
 
 
 
