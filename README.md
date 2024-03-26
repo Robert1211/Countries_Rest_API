@@ -24,6 +24,7 @@ homepage
 7. Detail component
 8. Dark theme 
 
+
 Steps:
 - capital
 - population
