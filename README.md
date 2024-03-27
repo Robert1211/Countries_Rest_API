@@ -2,7 +2,7 @@
 ### REST Countries API 
 
 #### Live app
-#### https://Robert1211.github.io/Countries_Rest_API/
+#### https://countries-robert.netlify.app
 
 Users should be able to:
 
