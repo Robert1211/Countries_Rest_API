@@ -27,6 +27,7 @@ homepage
 Steps:
 - capital
 - population
- - name.common
+- name.common
 - region
 - flags.png
+- improve css
