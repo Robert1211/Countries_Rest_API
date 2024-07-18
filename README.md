@@ -30,4 +30,3 @@ Steps:
 - name.common
 - region
 - flags.png
-- improve css
